@@ -1,0 +1,80 @@
+### CREATE five documents.
+POST http://localhost:3000/serialNumbers HTTP/1.1
+content-type: application/json
+
+{
+    "serial": "U9743H938FH",
+    "datePurchased": "2023-05-01",
+    "description": "Nintendo Switch",
+    "value": 499.99
+}
+
+### CREATE 2
+POST http://localhost:3000/serialNumbers HTTP/1.1
+content-type: application/json
+
+{
+    "serial": "NCAS922-G14-4080S",
+    "datePurchased": "2023-11-15",
+    "description": "Asus G14 Zephyrus",
+    "value": 2399.99
+}
+
+### CREATE 3
+POST http://localhost:3000/serialNumbers HTTP/1.1
+content-type: application/json
+
+{
+    "serial": "B2309UDJJ",
+    "datePurchased": "2021-07-20",
+    "description": "Bose QuietComfort 35 II Headphones",
+    "value": 299.00
+}
+
+### CREATE 4
+POST http://localhost:3000/serialNumbers HTTP/1.1
+content-type: application/json
+
+{
+    "serial": "R3CW70H7EXT",
+    "datePurchased": "2023-01-10",
+    "description": "Samsung Galaxy S21+ Ultra",
+    "value": 999.99
+}
+
+### CREATE 5
+POST http://localhost:3000/serialNumbers HTTP/1.1
+content-type: application/json
+
+{
+    "serial": "48GJ03FCC1229U",
+    "datePurchased": "2022-03-05",
+    "description": "LG OLED 48",
+    "value": 1599.99
+}
+
+### RETRIEVE all documents.
+GET http://localhost:3000/serialNumbers HTTP/1.1
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/serialNumbers/64d3b1398146c0d744a4b95b HTTP/1.1
+
+### UPDATE one document's value, by ID.
+### Replace the ID in the following request with one that exists
+### and update the value:
+PUT http://localhost:3000/serialNumbers/64d3afbb0816f78a7cedf90a HTTP/1.1
+content-type: application/json
+
+{
+    "serial": "R3CW70H7EXT",
+    "datePurchased": "2023-01-10",
+    "description": "Samsung Galaxy S21+ Ultra",
+    "value": 999.99
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/serialNumbers/64d3afbb0816f78a7cedf90a HTTP/1.1
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/serialNumbers HTTP/1.1
