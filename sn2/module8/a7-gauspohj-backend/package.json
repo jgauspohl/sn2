@@ -1,0 +1,21 @@
+{
+  "name": "serialNumbers-starter-backend",
+  "version": "2023",
+  "description": "List of product name, serial numbers, description for insurance purposes.",
+  "main": "serialNumber-controller.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon serialNumbers-controller.mjs"
+  },
+  "author": "Josh Gauspohl",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "rest": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
